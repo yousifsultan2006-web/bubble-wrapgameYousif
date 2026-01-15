@@ -8,12 +8,18 @@ int main() {
     bn::backdrop::set_color(bn::color(20, 31, 20));
 
 
- while(true) {
+ while(true) 
+    {
    
-if (bn::keypad::a_pressed()) 
-    {bn::backdrop::set_color(bn::color(31, 21, 22));
+        if (bn::keypad::a_held()) 
+            {bn::backdrop::set_color(bn::color(31, 21, 22));} 
+        else if (bn::keypad::b_held())
+            {bn::backdrop::set_color(bn::color(21, 11, 31));}
+    else {
+        bn::backdrop::set_color(bn::color(20,31,20));
     }
-    bn::core::update();
-
+            bn::core::update();
+    }
+       
+    
 }
- }
