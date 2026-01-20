@@ -17,7 +17,7 @@ int main() {
         bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-40, y);
         circles2.push_back(myCircle2);
     }
- for(int x = -40; x <= 40; x += 10)
+ for(int x = -40; x <= 90; x += 10)
     {
         BN_LOG("x value", x);
          bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
