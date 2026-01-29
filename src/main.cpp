@@ -10,22 +10,50 @@ int main() {
     // Your code here
     bn::core::init();
     bn::backdrop::set_color(bn::color(20, 31, 20));
-    bn::vector<bn::sprite_ptr, 10> circles = {};
+    bn::vector<bn::sprite_ptr, 35> circles = {};
     bn::vector<bn::sprite_ptr, 20> circles2 = {};
+    bn::vector<bn::sprite_ptr, 20> circles3 = {};
+   
+
+
     for(int y = -40; y <= 40; y += 10)
     {
-        bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(-40, y);
-        circles2.push_back(myCircle2);
-    }
- for(int x = -40; x <= 90; x += 10)
-    {
-        BN_LOG("x value", x);
-         bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
-         circles.push_back(myCircle);
+        bn::sprite_ptr myCircle1 = bn::sprite_items::dot.create_sprite(-40, y);
+        circles2.push_back(myCircle1);
 
- }
-   
-    
+        for (int i = 0; i < circles2.size(); i++) {
+            circles2[i].set_horizontal_scale(0.5f + (i * 0.1f));
+            circles2[i].set_vertical_scale(1.0f + (i * 0.1f));
+        }
+    }
+//  for(int x = -200; x <= 10; x += 10)
+//     {
+//         BN_LOG("x value", x);
+//          bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 40);
+//          circles.push_back(myCircle);
+
+//  }
+//  for (int y= -40; y <= 40; y += 10)
+//  {
+//         bn::sprite_ptr myCircle1 = bn::sprite_items::dot.create_sprite(40, y);
+        
+//         for (int i = 0; i < circles3.size(); i++) {
+//             circles3[i].set_horizontal_scale(0.5f + (i * 0.1f));
+//             circles3[i].set_vertical_scale(1.0f + (i * 0.1f));
+//         }
+
+//         circles.push_back(myCircle1);
+ //}
+
+//  circles2[0].set_scale(1.5);
+//  circles[0].set_scale(1.8);
+//  circles2[8].set_scale(2.0);
+//  circles2[8].set_vertical_scale(1.5);
+
+
+ 
+
+
  while(true) 
     {
         
